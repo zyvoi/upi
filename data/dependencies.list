@@ -1,0 +1,4 @@
+software-properties-common
+curl
+wget
+whiptail

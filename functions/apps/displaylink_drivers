@@ -1,0 +1,15 @@
+#!/bin/bash
+
+function download_displaylink_drivers { 
+    wget https://www.synaptics.com/sites/default/files/Ubuntu/pool/stable/main/all/synaptics-repository-keyring.deb
+}
+
+
+function install_displaylink_drivers { 
+    sudo apt install ./Downloads/synaptics-repository-keyring.deb
+    sudo apt update
+    sudo apt install displaylink-driver
+}
+
+
+

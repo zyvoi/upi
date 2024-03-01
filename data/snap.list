@@ -1,0 +1,4 @@
+code --classic 
+alacritty --classic
+yt-dlp --edge 
+nvim --classic
