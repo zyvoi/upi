@@ -36,7 +36,7 @@ function install_flatpak_apps {
 			--menu "\nWhat ${NAME,,} would you like to install?" \
 			--ok-button "Install" \
 			--cancel-button "Go Back" \
-			$LINES $COLUMNS $(( $LINES - 12 )) \
+			$LINES $COLUMNS $(( $LINES - 9 )) \
 			'install_flatpak_dropbox'   'Dropbox' \
 			'install_flatpak_chrome'    'Chrome' \
 			'install_flatpak_github'    'GitHub' \
