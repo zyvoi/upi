@@ -1,6 +1,7 @@
 nautilus
 ranger
 transmission
+terminator
 mpv
 build-essential
 git
@@ -22,3 +23,5 @@ unrar
 powertop
 symlinks
 tlp
+ntfs-3g 
+fuse

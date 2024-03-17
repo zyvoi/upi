@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function download_displaylink_drivers { 
-    wget https://www.synaptics.com/sites/default/files/Ubuntu/pool/stable/main/all/synaptics-repository-keyring.deb
+    wget -P ~/Downloads/ https://www.synaptics.com/sites/default/files/Ubuntu/pool/stable/main/all/synaptics-repository-keyring.deb
 }
 
 

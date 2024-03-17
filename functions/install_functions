@@ -192,7 +192,7 @@ function install_from_list_snap() {
 				# Install package
 				echo_message warning "Package '$PACKAGE' is not installed. Installing..."
 				# Admin privileges
-				superuser_do "snap install -y $PACKAGE"
+				superuser_do "snap install $PACKAGE --classic"
 				# Check if failed
 				if [[ $? != 0 ]]; then
 					echo_message error "Error installing '$PACKAGE'."
