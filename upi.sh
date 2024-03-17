@@ -518,27 +518,27 @@ sudo apt autoremove -y
 echo -e "\nAPT's installed:"
 for program_name in ${PROGRAMS_APT[@]}; do
 	if dpkg -l | grep -q $program_name; then # Check if the program is installed
-		echo -e "	${GREEN}[INSTALADO] - $program_name ${NC}"
+		echo -e "	${GREEN}[INSTALLED] - $program_name ${NC}"
 	else
-		echo -e "	${RED}[FALHOU] - $program_name ${NC}"
+		echo -e "	${RED}[FAILED] - $program_name ${NC}"
 	fi
 done
 
 echo -e "\nFLATPAK's installed:"
 for program_name in ${PROGRAMS_FLATPAK[@]}; do
 	if flatpak list | grep -q $program_name; then # Check if the program is installed
-		echo -e "	${GREEN}[INSTALADO] - $program_name ${NC}"
+		echo -e "	${GREEN}[INSTALLED] - $program_name ${NC}"
 	else
-		echo -e "	${RED}[FALHOU] - $program_name ${NC}"
+		echo -e "	${RED}[FAILED] - $program_name ${NC}"
 	fi
 done
 
 echo -e "\nSNAP's installed:"
 for program_name in ${PROGRAMS_SNAP[@]}; do
 	if snap list | grep -q $program_name; then # Check if the program is installed
-		echo -e "	${GREEN}[INSTALADO] - $program_name ${NC}"
+		echo -e "	${GREEN}[INSTALLED] - $program_name ${NC}"
 	else
-		echo -e "	${RED}[FALHOU] - $program_name ${NC}"
+		echo -e "	${RED}[FAILED] - $program_name ${NC}"
 	fi
 done
 # ---------------------------------------------------------------------------- #
