@@ -188,7 +188,7 @@ function install_from_list_snap() {
 		# Install loop
 		for PACKAGE in $(cat $LIST); do
 			# If package is not installed
-			if [ $(check_package_installed $PACKAGE) != 0 ]; then
+			if [ $(check_snap_package_installed $PACKAGE) != 0 ]; then
 				# Install package
 				echo_message warning "Package '$PACKAGE' is not installed. Installing..."
 				# Admin privileges

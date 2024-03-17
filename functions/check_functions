@@ -6,6 +6,14 @@ function check_package_installed() {
 	dpkg-query -W --showformat='${Status}\n' $@ | grep "install ok installed" &> /dev/null; echo $?
 }
 
+# Check snap for package installation status
+function check_snap_package_installed() {
+	# check snap for error not installed status and return a value
+	snap list $@ >> grep "error: no matching snaps installed" &> /dev/null; echo $?
+
+}
+
+
 # Check if single package is installed
 # ${1} = package, ${2} = return_function
 function check_package() {
