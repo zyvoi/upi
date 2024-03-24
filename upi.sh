@@ -274,21 +274,15 @@ PROGRAMS_APT=(
 	gnome-weather
 	gparted
 
-	# Aplicativos
-	anydesk
+	# Applications
 	cpu-x
 	flatpak
-	# inkscape
-	libreoffice
 	remmina
 	shotwell
 	stacer
 	stellarium
-	# synaptic
 	timeshift
-	# vlc
-	# virtualbox
-	# virtualbox-dkms
+
 )
 
 ## ----- Programs to be installed via Flatpak ----- ##
@@ -305,7 +299,6 @@ PROGRAMS_FLATPAK=(
     org.gnome.Boxes
     org.flameshot.Flameshot
     com.jgraph.drawio.desktop
-    com.sublimetext.three
     cc.arduino.arduinoide
     com.ultimaker.cura
     io.github.wereturtle.ghostwriter
@@ -320,7 +313,6 @@ PROGRAMS_FLATPAK=(
     org.freecadweb.FreeCAD
     org.kicad.KiCad
     org.onlyoffice.desktopeditors
-    com.visualstudio.code
     io.github.shiftey.Desktop
     org.remmina.Remmina
     org.eclipse.Javascript
@@ -331,7 +323,6 @@ PROGRAMS_FLATPAK=(
 	com.github.k4zmu2a.spacecadetpinball
 	com.mattjakeman.ExtensionManager
 	com.obsproject.Studio
-	# com.skype.Client
 	com.slack.Slack
 	com.spotify.Client
 	com.vixalien.decibels
@@ -353,7 +344,6 @@ PROGRAMS_FLATPAK=(
 	org.gnome.SoundRecorder
 	org.gnome.Totem
 	org.gnome.gitlab.somas.Apostrophe
-	# org.kde.kdenlive
 	org.nickvision.tubeconverter
 	org.telegram.desktop
 	org.videolan.VLC
@@ -372,8 +362,6 @@ PROGRAMS_FLATPAK=(
 	io.github.mimbrero.WhatsAppDesktop
 	com.anydesk.Anydesk
 	org.mozilla.Thunderbird
-	org.gimp.GIMP
-	org.kde.krita
 )
 
 ## ----- Programs to be installed via Snap ----- ##
@@ -386,7 +374,6 @@ PROGRAMS_SNAP=(
 	musescore
 	scrcpy
 	simplenote
-	# skype
 )
 # ---------------------------------------------------------------------------- #
 
