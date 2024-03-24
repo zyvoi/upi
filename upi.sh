@@ -124,7 +124,7 @@ URL_GOOGLE_EARTH_PRO="https://dl.google.com/dl/earth/client/current/google-earth
 URL_MS_TEAMS="https://teams.microsoft.com/downloads/desktopurl?env=production&plat=linux&arch=x64&download=true&linuxArchiveType=deb"
 
 ## ----- Downloads Directory ----- ##
-DOWNLOADS_DIRECTORY="$HOME/Downloads/programas"
+DOWNLOADS_DIRECTORY="$HOME/Downloads/programs"
 
 ## ----- Prerequisites----- ##
 sudo echo "vm.swappiness=10" | sudo tee -a /etc/sysctl.d/99-swappiness.conf
