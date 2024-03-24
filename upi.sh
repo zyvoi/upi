@@ -215,8 +215,8 @@ PROGRAMS_APT=(
 	fonts-inconsolata
 	fonts-lato
 	fonts-roboto
-	fonts-ubuntu-font-family-console
-	ttf-ubuntu-font-family
+	#fonts-ubuntu-font-family-console
+	#ttf-ubuntu-font-family
 	fonts-apropal
 	fonts-atarismall
 	fonts-baekmuk
