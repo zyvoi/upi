@@ -105,7 +105,7 @@ echo -e "${BOLDBLUE}User: ${NC}$USER\n\n"
 PPAS=(
 	ppa:git-core/ppa # Git
 	# ppa:graphics-drivers/ppa		   # Nvidia
-	ppa:libreoffice/ppa                # LibreOffice
+	#ppa:libreoffice/ppa                # LibreOffice
 	ppa:stellarium/stellarium-releases # Stellarium
 )
 
@@ -114,9 +114,6 @@ URL_ANYDESK_KEY="https://keys.anydesk.com/repos/DEB-GPG-KEY"
 URL_ANYDESK_PPA="http://deb.anydesk.com/"
 
 # ----- URLs -----#
-# Google Chrome
-URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
-
 # Google Earth Pro
 URL_GOOGLE_EARTH_PRO="https://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb"
 
@@ -324,6 +321,7 @@ PROGRAMS_FLATPAK=(
 	com.mattjakeman.ExtensionManager
 	com.obsproject.Studio
 	com.slack.Slack
+	org.chromium.Chromium
 	com.spotify.Client
 	com.vixalien.decibels
 	de.haeckerfelix.Fragments
@@ -336,6 +334,7 @@ PROGRAMS_FLATPAK=(
 	io.gitlab.news_flash.NewsFlash
 	io.gitlab.theevilskeleton.Upscaler
 	org.gabmus.whatip
+	com.google.EarthPro
 	org.gimp.GIMP
 	org.gnome.Boxes
 	org.gnome.Calendar
@@ -362,6 +361,7 @@ PROGRAMS_FLATPAK=(
 	io.github.mimbrero.WhatsAppDesktop
 	com.anydesk.Anydesk
 	org.mozilla.Thunderbird
+	com.github.IsmaelMartinez.teams_for_linux
 )
 
 ## ----- Programs to be installed via Snap ----- ##
@@ -406,10 +406,10 @@ for ppa in ${PPAS[@]}; do
 done
 
 # AnyDesk
-if [ ! -f "/usr/share/keyrings/anydesk-stable-keyring.gpg" ]; then
-	wget -qO - $URL_ANYDESK_KEY | sudo gpg --dearmor -o /usr/share/keyrings/anydesk-stable-keyring.gpg
-	echo "deb [arch=amd64 signed-by=/usr/share/keyrings/anydesk-stable-keyring.gpg] $URL_ANYDESK_PPA all main" | sudo tee /etc/apt/sources.list.d/anydesk-stable.list
-fi
+#if [ ! -f "/usr/share/keyrings/anydesk-stable-keyring.gpg" ]; then
+#	wget -qO - $URL_ANYDESK_KEY | sudo gpg --dearmor -o /usr/share/keyrings/anydesk-stable-keyring.gpg
+#	echo "deb [arch=amd64 signed-by=/usr/share/keyrings/anydesk-stable-keyring.gpg] $URL_ANYDESK_PPA all main" | sudo tee /etc/apt/sources.list.d/anydesk-stable.list
+#fi
 
 # Speedtest
 sudo apt install curl
@@ -423,12 +423,11 @@ sudo apt update -y
 
 ## ----- Downloading and installing external programs ----- ##
 mkdir "$DOWNLOADS_DIRECTORY"
-wget -c "$URL_GOOGLE_CHROME" -P "$DOWNLOADS_DIRECTORY"
-wget -c "$URL_GOOGLE_EARTH_PRO" -P "$DOWNLOADS_DIRECTORY"
-wget -c "$URL_MS_TEAMS" -P "$DOWNLOADS_DIRECTORY"
+#get -c "$URL_GOOGLE_EARTH_PRO" -P "$DOWNLOADS_DIRECTORY"
+#wget -c "$URL_MS_TEAMS" -P "$DOWNLOADS_DIRECTORY"
 
 # Installing .deb packages downloaded in the previous session
-sudo dpkg -i $DOWNLOADS_DIRECTORY/*.deb
+#sudo dpkg -i $DOWNLOADS_DIRECTORY/*.deb
 
 # ----- Installing packages via Apt ----- ##
 for program_name in ${PROGRAMS_APT[@]}; do
