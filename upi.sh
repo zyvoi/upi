@@ -360,7 +360,7 @@ PROGRAMS_FLATPAK=(
 	us.zoom.zoom
 	io.github.mimbrero.WhatsAppDesktop
 	com.anydesk.Anydesk
-	org.mozilla.Thunderbird
+	#org.mozilla.Thunderbird
 	com.github.IsmaelMartinez.teams_for_linux
 )
 
